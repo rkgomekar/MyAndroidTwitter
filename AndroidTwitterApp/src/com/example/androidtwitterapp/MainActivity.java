@@ -1,14 +1,7 @@
 package com.example.androidtwitterapp;
 
 import twitter4j.auth.RequestToken;
-
-import com.hintdesk.core.activities.AlertMessageBox;
-import com.hintdesk.core.util.OSUtil;
-import com.hintdesk.core.util.StringUtil;
-
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,16 +9,20 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.os.Build;
-import android.preference.PreferenceManager;
 
-public class MainActivity extends ActionBarActivity {
+import com.hintdesk.core.activities.AlertMessageBox;
+import com.hintdesk.core.util.OSUtil;
+import com.hintdesk.core.util.StringUtil;
+
+public class MainActivity extends Activity {
 	
 	  Button buttonLogin;
 
