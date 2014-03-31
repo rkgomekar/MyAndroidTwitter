@@ -8,6 +8,7 @@ package com.hintdesk.Twitter_oAuth;
  * To change this template use File | Settings | File Templates.
  */
 public class ConstantValues {
+	
     public static String TWITTER_CONSUMER_KEY = "R2XwAvgabWEL2hUne6vhTQ";
     public static String TWITTER_CONSUMER_SECRET = "7vpFE5vmivLahIZm0rMZFYvYuhsg8tG4xFdIWhGbE";
     public static String TWITTER_CALLBACK_URL = "oauth://com.hintdesk.Twitter_oAuth";

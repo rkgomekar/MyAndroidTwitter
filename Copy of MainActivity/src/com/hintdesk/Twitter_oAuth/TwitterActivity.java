@@ -126,8 +126,10 @@ List<String> tweetList = new ArrayList<String>();
 //				e.printStackTrace();
 //			}
 
-			updateTimeline timeline = new updateTimeline();
-			timeline.execute();
+//			updateTimeline timeline = new updateTimeline();
+//			timeline.execute();
+			Intent intent = new Intent(TwitterActivity.this, ListViewActivity.class);
+			startActivity(intent);
 		}
 	};
     
@@ -207,10 +209,13 @@ List<String> tweetList = new ArrayList<String>();
 
         @Override
         protected void onPostExecute(Boolean result) {
-            if (result)
-                Toast.makeText(getApplicationContext(), "Tweet successfully", Toast.LENGTH_SHORT).show();
-            else
+            if (result){
+                Toast.makeText(getApplicationContext(), "Tweeted successfully", Toast.LENGTH_SHORT).show();
+                editTextStatus.setText("");
+            }
+            else{
                 Toast.makeText(getApplicationContext(), "Tweet failed", Toast.LENGTH_SHORT).show();
+            }
         }
 
         @Override
@@ -270,6 +275,7 @@ List<String> tweetList = new ArrayList<String>();
                 for (twitter4j.Status status : statuses) {
                     System.out.println("@" + status.getUser().getScreenName() + " - " + status.getText()); 
                  temp=  "@" + status.getUser().getScreenName() + " - " + status.getText()+"\n"; 
+                 
                     
                     tweetList.add(temp);
                     }
@@ -306,4 +312,5 @@ List<String> tweetList = new ArrayList<String>();
         }
     
     
-}}
+}
+    }
